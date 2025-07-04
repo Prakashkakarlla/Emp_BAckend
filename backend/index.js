@@ -4,7 +4,7 @@ import cors from 'cors';
 import Employee from './models/Employee.js';
 
 const app = express();
-const PORT = 5000;
+
 
 app.use(cors());
 app.use(express.json());
@@ -33,6 +33,7 @@ app.delete('/employees/:id', async (req, res) => {
   res.json({ message: 'Employee deleted' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.listen(5000, '0.0.0.0', () => {
+  console.log("Server running...");
 });
+
